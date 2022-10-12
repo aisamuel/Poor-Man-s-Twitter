@@ -53,16 +53,16 @@
               >
             </p>
             <form action="" class="form" @submit.prevent="addTweet">
-              <div class="justify-content-between align-items-center"> 
+              <div class="d-flex justify-content-between align-items-center"> 
                     <input
                         type="text"
                         id="name"
-                        class="form-control mb-5"
+                        class="form-control mb-5 mr-5"
                         placeholder="Enter Tweet name"
                         v-model="tweet.name"
                         autofocus
                     />
-                    <textarea
+                    <input
                         type="text"
                         id="content"
                         class="form-control mb-5"
@@ -70,7 +70,7 @@
                         placeholder="Enter Tweet Content"
                         v-model="tweet.content"
                         autofocus
-                    ></textarea>
+                    />
                 </div>
                 
                 <input type="submit" class="btn btn-primary" value="Add Tweet" />

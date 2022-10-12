@@ -20,5 +20,5 @@ class Tweet(BaseModel):
     content = models.CharField(max_length=50)
     
     class Meta:
-        ordering = ['created']
+        ordering = ['-created']
     
