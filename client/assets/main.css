@@ -15,3 +15,7 @@ body {
 input[type="text"]:focus {
   box-shadow: none;
 }
+
+.mr-5 {
+  margin-right: 5px;
+}
