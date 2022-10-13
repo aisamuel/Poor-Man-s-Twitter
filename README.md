@@ -2,7 +2,7 @@
 
 # Introduction
 
-The goal of this project is to provide minimalist twitter application using Vue js and Django Rest Framework
+The goal of this project is to provide minimalist twitter application using Vue js and Django Rest Framework.
 
 ### Existing virtualenv
 
@@ -23,6 +23,8 @@ This assumes that `python3` is linked to valid installation of python 3 and that
 for installing python 3 packages.
 
 Installing inside virtualenv is recommended, however you can start your project without virtualenv too.
+
+    $ source env/bin/activate 
 
 If you don't have django installed for python 3 then run:
 
@@ -49,6 +51,8 @@ First clone the repository from Github and switch to the new directory:
     $ cd server
     
 Activate the virtualenv for your project.
+
+    $ source env/bin/activate  
     
 Install project dependencies:
 
@@ -59,6 +63,10 @@ Then simply apply the migrations:
     $ python manage.py makemigrations  
 
     $ python manage.py migrate
+
+Then run test:
+
+    $ python manage.py test
     
 
 You can now run the development server:
