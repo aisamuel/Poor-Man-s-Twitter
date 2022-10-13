@@ -6,10 +6,18 @@ const app = Vue.createApp({
         tweetUrl: "api/tweet/tweets/",
         fields: ['name', 'content', 'created'],
         tweet: { name: "", content: ""},
+        currentSort:'name',
+        currentSortDir:'asc',
         tweetsList: [],
       };
     },
     methods: {
+      sort:function(s) {
+        if(s === this.currentSort) {
+          this.currentSortDir = this.currentSortDir==='asc'?'desc':'asc';
+        }
+        this.currentSort = s;
+      },
       async addTweet() {
         if (this.tweet.name == "") {
             alert("Enter tweet name and try again");
@@ -46,6 +54,17 @@ const app = Vue.createApp({
         }
       },
 
+    },
+    computed:{
+      sortedTweetsList:function() {
+        return this.tweetsList.sort((a,b) => {
+          let modifier = 1;
+          if(this.currentSortDir === 'desc') modifier = -1;
+          if(a[this.currentSort] < b[this.currentSort]) return -1 * modifier;
+          if(a[this.currentSort] > b[this.currentSort]) return 1 * modifier;
+          return 0;
+        });
+      }
     },
     mounted: function() {
         this.fetchTweets();

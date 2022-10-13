@@ -84,12 +84,12 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
+                    <th @click="sort('name')" scope="col">Name</th>
                     <th scope="col">Content</th>
-                    <th scope="col">Created</th>
+                    <th @click="sort('created')" scope="col">Created</th>
                   </tr>
                 </thead>
-                <tbody v-for="(tweet,index) in tweetsList">
+                <tbody v-for="(tweet,index) in sortedTweetsList">
                   <tr>
                     <th scope="row">{{index + 1}}</th>
                     <td>{{tweet.name}}</td>
