@@ -15,7 +15,7 @@ And then run the `django-admin.py` command to start the new project:
     $ django-admin.py startproject \
       --template=https://github.com/aisamuel/Poor-Man-s-Twitter.git \
       --extension=py,md \
-      <project_name>
+      Poor-Man-s-Twitter
       
 ### No virtualenv
 
