@@ -23,7 +23,7 @@ const app = Vue.createApp({
             alert("Enter tweet name and try again");
             return;
           }
-          if (this.tweet.content == "") {
+        if (this.tweet.content == "") {
               alert("Enter tweet content and try again");
               return;
           }
