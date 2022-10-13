@@ -33,7 +33,7 @@ And then:
     $ python3 -m django startproject \
       --template=https://github.com/aisamuel/Poor-Man-s-Twitter.git \
       --extension=py,md \
-      <project_name>
+      Poor-Man-s-Twitter
       
       
 After that just install the local dependencies, run migrations, and start the server.
