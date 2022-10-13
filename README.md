@@ -52,10 +52,11 @@ Activate the virtualenv for your project.
     
 Install project dependencies:
 
-    $ pip install -r requirements.txt
-    
+    $ pip install -r requirements.txt   
     
 Then simply apply the migrations:
+
+    $ python manage.py makemigrations  
 
     $ python manage.py migrate
     
